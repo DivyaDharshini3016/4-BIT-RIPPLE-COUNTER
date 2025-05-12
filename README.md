@@ -8,8 +8,6 @@ To implement  4 Bit Ripple Counter using verilog and validating their functional
 
 Quartus prime
 
-**THEORY**
-
 **4 Bit Ripple Counter**
 
 A binary ripple counter consists of a series connection of complementing flip-flops (T or JK type), with the output of each flip-flop connected to the Clock Pulse input of the next higher-order flip-flop. The flip-flop holding the least significant bit receives the incoming count pulses. The diagram of a 4-bit binary ripple counter is shown in Fig. below.
@@ -24,17 +22,40 @@ In timing diagram Q0 is changing as soon as the negative edge of clock pulse is 
 
 **Procedure**
 
-/* write all the steps invloved */
+1.Type the program in Quartus software.
+2.Compile and run the program.
+3.Generate the RTL schematic and save the logic diagram.
+4.Create nodes for inputs and outputs to generate the timing diagram.
+5.For different input combinations generate the timing diagram
 
 **PROGRAM**
 
 /* Program for 4 Bit Ripple Counter and verify its truth table in quartus using Verilog programming.
-
- Developed by: RegisterNumber:
+ Developed by:Divya Dharshini S RegisterNumber:212224240039
+ ```
+module EX_12(clk,rst,din,q);
+input clk,rst;
+input din;
+output reg [3:0]q;
+always @(posedge clk)
+begin
+q[0]<=din;
+q[1]<=q[0];
+q[2]<=q[1];
+q[3]<=q[2];
+end
+endmodule
+```
 */
 
 **RTL LOGIC FOR 4 Bit Ripple Counter**
 
+![Screenshot 2025-05-12 223447](https://github.com/user-attachments/assets/9e5d392d-dc3f-4491-8b2f-2c1a0f5cb946)
+
 **TIMING DIGRAMS FOR 4 Bit Ripple Counter**
 
+![Screenshot 2025-05-12 223817](https://github.com/user-attachments/assets/00981439-a06a-457a-9347-aedf99c82fd0)
+
 **RESULTS**
+
+Implemented 4 Bit Ripple Counter using verilog and validating their functionality using their functional tables.
